@@ -1,11 +1,11 @@
 Labs
 =====
 
-[Lab 1: Hello, World!](labs/lab1)  
-[Lab 2: Control Flow and Conditionals](labs/lab1)  
-[Lab 3: Loops and More Control Flow](labs/lab1)  
-[Lab 4: Lists and Loops](labs/lab1)  
-[Lab 5: Functions](labs/lab1)  
-[Lab 6: Debugging](labs/lab1)  
-[Lab 7: HTML](labs/lab1)  
-[Lab 8: C++](labs/lab1)
+[Lab 1: Hello, World!](lab1)  
+[Lab 2: Control Flow and Conditionals](lab2)  
+[Lab 3: Loops and More Control Flow](lab3)  
+[Lab 4: Lists and Loops](lab4)  
+[Lab 5: Functions](lab5)  
+[Lab 6: Debugging](lab6)  
+[Lab 7: HTML](lab7)  
+[Lab 8: C++](lab8)
