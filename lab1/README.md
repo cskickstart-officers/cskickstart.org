@@ -1,61 +1,82 @@
-# EECS 280 Lab 1: Getting Started
+# Lab 1: Hello, World!
 
-### Lab Due Sunday, January 19, 2020, 8:00 pm
+In this lab, we will introduce ourselves and go over the structure of all CS KickStart
+labs going forward. You will then learn about Linux, shells, and programming languages,
+and you'll even get to write and run your first program!
 
-### [Direct autograder link](https://autograder.io/web/project/523)
+#### Goals
 
-In this lab, you will set up your development environment for the class, which
-includes a working terminal and a visual debugger to work more effectively on
-your projects. Additionally, you will learn to use Git to back up your project
-and to connect to CAEN to test your code.
+* Cover lab structure  
+* Setup programming environment  
+* Run your first program  
 
-You must work on this lab individually.
+## Lab Structure
 
-#### Files to submit
+CS KickStart labs are not graded. These labs are designed to teach and encourage critical
+thinking rather than present direct content. If you have question, ask the instructor, officers,
+or another participant at any time. Groupwork is always permitted, just remember to stop
+your conversations when the instructor is presenting.
 
-* `p1-stats.vcxproj`, for Visual Studio users
-* `launch.json`, for VS Code users
-* `project.pbxproj`, for XCode users
-* `main.cpp`, compile check only, "hello world" is OK
-* `stats.cpp`, compile check only, function stubs are OK
-* `stats_tests.cpp`, compile check only, no additional tests needed
-* `localhost.txt`
-* `caen.txt`
-* `gitlog.txt`
+## Programming Environment
 
+### Operating System
 
-#### Completion Criteria/Checklist
+An operating system is the core of the computer. It's what makes it possible for you to interact
+with your computer and the hardware. We're using the Linux operating system because it has features
+that make it useful for programmers. Linux focuses more on giving you access to the nitty-gritty details
+of controlling the computer, compared to some operating system's, like MacOS, that focus on making the
+experience friendly for non-technical users. 
 
-To pass this lab, you must finish tasks 1 through 4.
+Linux is used in a lot of surpising places:
 
-* (Task 1) Visual debugger set up.
-* (Task 2) Gitlab web interface for your project 1 with at least 3
-  commits.
-* (Task 3) Successful compilation of project 1 using `make` in a local
-  terminal.
-* (Task 4) Successful compilation of project 1 using `make` on CAEN
-  through `ssh`.
+* Most machines that relay information across the internet  
+* Over two-thirds of websites  
+* All top 500 super computers  
+* Many data centers  
+* Even the entertainment systems on Delta Airlines!  
 
-## Task 0 - Preliminaries
+### Shell
 
-### You Need a CAEN Account
+A shell is an interface you can use to interact with the core of the computer. There are many kinds of shells.
+One kind of shell is called a graphical user interface, or GUI. This is what you've been used to your whole life.
+Another kind of shell is a command-line shell, or terminal. 
 
-If you already have a CAEN account (if you took a 100-level CS course,
-you should have one), you can skip this section. Otherwise, go to the
-CAEN Hotline (1315 Duderstadt Center) to set up an account as soon as
-possible. You can still follow the guide; just skip the CAEN section
-until later.
+#### Activity: Working with Files on the Command Line.
 
-### Complete the Project 1 Setup Guide
+Open up the terminal on your computer by searching for *terminal* among your computer's applications. You should
+see a window that looks something like this (yours might be a different color):
 
-Now, in order to set up your development environment, you should
-complete the [setup
-guide](https://eecs280staff.github.io/p1-stats/setup.html) provided
-with project 1, as it includes everything from installing a terminal
-and a visual debugger to making some commits in Git and connecting to
-CAEN.
+![](images/terminal.png)
 
-**DO NOT** move on to the tasks below until you have completed the setup tutorial.
+You can do things in your terminal by typing commands into the command line. Here are some common commands, many of
+which we'll use in this lab:
+
+| Command                   | Effect |
+| ------------------------- | -------------------- |
+| `pwd`                     | Print path of current working directory |
+| `ls`                      | List directory content |
+| `mkdir <directory>`       | Create new directory named <directory> |
+| `cd <directory>`          | Change directory to <directory> |
+| `cd ..`                   | Change directory to parent directory |
+| `cd ~`                    | Change directory to root directory |
+| `cp <file> <directory>`   | Copy <file> to <directory> |
+| `mv <file-old> <file-new>`| Rename <file-old> to <file-new> |
+| `mv <file> <directory>`   | Move <file> to <directory> |
+
+*Note: directory is just another name for folder.*
+
+Change directories to the root directory by typing the command `cd ~` into your terminal and pressing enter. Then type `ls` to see the contents of the root directory. You should see a directory named `Desktop`. Change to the Desktop directory by typing `cd Desktop`. Type `pwd` to see the path of your current working directory and confirm that you're in the right place.
+
+Now type the following commands to create a new directory named `CS KickStart` (anything after the # symbol is a comment and won't be executed as part of the command):
+
+```console
+$ pwd                   # make sure that you're in the Desktop directory
+$ ls                    # see the contents of the Desktop directory
+$ mkdir cskickstart     # make a new directory called cskickstart
+$ ls                    # see that cskickstart is now in the Desktop directory
+$ cd cskiskstart        # change directory to the cskickstart directory
+$ pwd                   # see that you're now in the Desktop/cskickstart directory
+```
 
 ## Task 1 - Visual Debugger
 
